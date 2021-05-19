@@ -92,4 +92,16 @@ body {
   -o-object-fit: contain;
      object-fit: contain;
 }
+
+#services-intro .btn-primary {
+  background-color: #caf7e3;
+  border: none;
+  color: #333333;
+  -webkit-transition: background-color 1s linear;
+  transition: background-color 1s linear;
+}
+
+#services-intro .btn-primary:hover {
+  background-color: #F7CADE;
+}
 /*# sourceMappingURL=custom.css.map */

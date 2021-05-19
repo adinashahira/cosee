@@ -106,4 +106,15 @@ body {
         height: 40vh;
         object-fit: contain;
         }
+
+    .btn-primary {
+        background-color: $main-color;
+        border: none;
+        color: $color-coal;
+        transition: background-color 1s linear;
+    }
+
+    .btn-primary:hover {
+        background-color: $second-color;
+    }
 }
