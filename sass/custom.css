@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Ubuntu+Mono&display=swap");
+/* CONTENTS */
+/* Declarations */
+body {
+  padding-top: 70px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+/* 1. Navbar */
+.navbar {
+  background-color: #caf7e3 !important;
+}
+
+.navbar .navbar-brand {
+  color: #333333;
+  font-family: "Ubuntu Mono", monospace;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-nav li a:link {
+  color: #666666;
+}
+
+.navbar-nav li a:hover {
+  color: #333333;
+}
+
+.navbar-nav li a:active {
+  color: #333333;
+}
+
+/* 2. Hero */
+.hero {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  height: 100vh;
+  width: 100%;
+  background: url("../assets/nathan-fertig-FBXuXp57eM0-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  -webkit-clip-path: circle(180vh at 50% -80vh);
+          clip-path: circle(180vh at 50% -80vh);
+}
+
+.hero .overlay {
+  background-color: #f9fafb7a;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.hero .headers {
+  padding-top: 10vh;
+  z-index: 10;
+  color: #333333;
+  text-shadow: 2px 2px #fff;
+}
+
+.hero .headers .fs-2 {
+  font-size: 7vh !important;
+}
+
+.hero .headers .fs-1 {
+  font-size: 15vh !important;
+  letter-spacing: 5px;
+}
+
+/* 3. Intro to Services  */
+#services-intro h1::after {
+  border-bottom: solid 4px #F7CADE !important;
+  content: "";
+  display: block;
+  width: 50%;
+  margin: auto;
+  padding-top: 5px;
+}
+
+#services-intro .card {
+  border: none;
+}
+
+#services-intro .card-img-top {
+  width: 100%;
+  height: 40vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+/*# sourceMappingURL=custom.css.map */
