@@ -5,43 +5,34 @@
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Cosee</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="sass/custom.css"/>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cosee - Create your safe space</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="sass/custom.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/custom-js.js"></script>
   </head>
   <body>
-    <!--[if lt IE 7]>
-      <p class="browsehappy">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="#">upgrade your browser</a> to improve your experience.
-      </p>
-    <![endif]-->
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm p-3 mb-5 fixed-top">
+      <div id="container">
+      <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#"><span class="material-icons d-inline-block align-text-top">
-            maps_home_work
-            </span> cosee. </a>
+          <a class="navbar-brand" href="#">cosee.</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-fill w-100">
+            <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Services</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Contact</a>
@@ -52,77 +43,22 @@
       </nav>
 
       <!-- Hero -->
-      <section class="hero mb-0">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="box-1 headers">
-              <h2 class="fs-2">Make your home</h2>
-              <h2 class="fs-1">the cosiest</h2>
-              <h2 class="fs-2">place on earth</h2>
-            </div>
+      <section id="hero">
+        <div class="row py-5">
+          <div class="col-md-6 px-5 py-5 order-md-2 lg-hero">
+            <h1>Make your home</h1>
+            <h1><em>the cosiest</em></h1>
+            <h1>place on earth</h1>
+          </div>
+          <div class="col-md-6 hero-img">
+            <img src="/assets/hero-minh-pham-xlzlHu-Z9J8-unsplash.jpg">
           </div>
         </div>
       </section>
-
-      <!-- Intro to Services -->
-      <section id="services-intro">
-        <h1 class="pt-5 text-center">How it Works</h1>
-        <div class="row px-5 pt-5">
-          <div class="col-md-4 col-sm-6">
-            <img src="assets/pexels-rfstudio-3810755.jpg" alt="Chat with us">
-          </div>
-          <div class="col-md-4 col-sm-6 text-center">
-            <h4>Chat with us</h4>
-            <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <img src="assets/mimi-thian-lp1AKIUV3yo-unsplash.jpg" alt="Discuss your preferences">
-          </div>
-        </div>
-        <div class="row px-5">
-          <div class="col-md-4 col-sm-6 text-center">
-            <h4>Create your design</h4>
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <img src="assets/surface-8JALcqYP25s-unsplash.jpg" alt="Discuss your preferences">
-          </div>
-          <div class="col-md-4 col-sm-6 text-center">
-            <h4>Visualize</h4>
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
-          </div>
-        </div>
-        <div class="row px-5">
-          <div class="col-md-4 col-sm-6">
-            <img src="assets/bench-accounting-C3V88BOoRoM-unsplash.jpg" alt="Chat with us">
-          </div>
-          <div class="col-md-4 col-sm-6 text-center">
-            <h4>Have it done</h4>
-            <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <img src="assets/mimi-thian-lp1AKIUV3yo-unsplash.jpg" alt="Discuss your preferences">
-          </div>
-        </div>
-        
-        <!-- CTA: Hire us now -->
-        <div class="row px-5 py-5">
-          <div class="d-flex justify-content-center">
-            <button class="btn btn-lg btn-primary w-75">Hire us now!</button>
-          </div>
-        </div>
-      </section>
-
-      <!-- Testimonials -->
-      <section id="testimonials">
-        <h1 class="pt-5 text-center">Testimonials</h1>
-        <div class="row px-5">
-          <div class="col-md-6">
-            jhjh
-          </div>
-        </div>
-      </section>
-
-    <script src="js/bootstrap.bundle.min.js" async defer></script>
+    </div>
+    
+    <script src="" async defer></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    
   </body>
 </html>

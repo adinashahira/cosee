@@ -1,147 +1,124 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Ubuntu+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Montserrat:wght@300&display=swap');
 
 /* CONTENTS */
 
 /* Declarations */
-$main-color: #caf7e3;
-$second-color: #F7CADE;
-$color-snow: #f4f4f4;
+$main-color: #A7BBC7;
+$main-dark-color: #1F2A31;
+$main-light-color: #DEE5EA;
+$secondary-color: #c7a7bb;
+$complement-color: #BBC7A7;
+
+$color-snow: #F4F4F4;
 $color-coal: #333333;
 $color-nickel: #666666;
 
-$brand-font: 'Ubuntu Mono', monospace;
-$body-font: 'Source Sans Pro', sans-serif;
+$color-success: #2ECC71;
+$color-failure: #E74C3C;
+$color-warning: #F1C40F;
 
-body { 
-    padding-top: 50px; 
-    font-family: $body-font;
-    overflow-x: hidden;
-}
+$accent-font: 'Cormorant Garamond', serif;
+$body-font: 'Montserrat', sans-serif;
 
-h1 {
-    letter-spacing: 5px;
-}
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../font/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+         local('MaterialIcons-Regular'),
+         url(../font/MaterialIcons-Regular.ttf) format('ttf'),
+ }
+ 
+ .material-icons {
+   font-family: 'Material Icons';
+   font-weight: normal;
+   font-style: normal;
+   font-size: 24px;  /* Preferred icon size */
+   display: inline-block;
+   line-height: 1;
+   text-transform: none;
+   letter-spacing: normal;
+   word-wrap: normal;
+   white-space: nowrap;
+   direction: ltr;
+ 
+   /* Support for all WebKit browsers. */
+   -webkit-font-smoothing: antialiased;
+   /* Support for Safari and Chrome. */
+   text-rendering: optimizeLegibility;
+ 
+   /* Support for Firefox. */
+   -moz-osx-font-smoothing: grayscale;
+ 
+   /* Support for IE. */
+   font-feature-settings: 'liga';
+ }
 
-h1::after {
-    border-bottom: solid 4px $second-color !important;
-    content: "";
-    display: block;
-    width: 25%;
-    margin: auto;
-    padding-top: 5px;
-}
+ body {
+     font-family: $body-font;
+ }
 
-/* 1. Navbar */
+/** 1. Navbar **/
 .navbar {
-    background-color:#fff !important;
+    background-color: #ffffff;
+    background: transparent;
+    z-index: 10;
 
     .navbar-brand {
-        color: $color-coal;
-        font-family: $brand-font;
-    }
-}
-
-.navbar-toggler {
-    border: none;
-}
-
-.navbar-nav {
-    li {
-        a:link {
-            color: $color-nickel;
-        }
-
-        a:hover {
-            color: $color-coal;
-        }
-
-        a:active {
-            color: $color-coal;
-        }
-    }
-}
-
-/* 2. Hero */
-.hero {
-    padding: 2rem 1rem;
-    margin-bottom: 2rem;
-    height: 100vh;
-    width: 100%;
-    background: url('https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1049&q=80');
-    background-position: 70%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-
-    .box-1 {
-        background-color: $main-color;
-        width: 40vh;
-        height: 40vh;
-        margin-top: 20vw;
-        margin-left: 25vw;
+        font-family: $accent-font;
+        padding: 0px 20px;
+        font-size: 4vh;
     }
 
-    .headers {
-        color: $color-nickel;
-        padding: 4vh;
-        box-shadow: -10px -10px 3px lighten($main-color, 80%);
+    .nav-item {
+        padding: 0 20px;
+    }
 
-        .fs-2 {
-            font-size: 4vh !important;
-            letter-spacing: 3px;
-        }
+    a:hover {
+        color: $secondary-color !important;
+    }
 
-        .fs-1 {
-            font-size: 6vh !important;
-            letter-spacing: 10px;
+    @media (min-width: 1441px) {
+        .navbar {
+            font-size: 1.5vw;
+        }   
+    }
+
+    @media (max-width: 768px) {
+        .navbar {
+            background-color: #ffffff;
         }
     }
 }
 
-/* 3. Intro to Services  */
-#services-intro {
-    .container {
-        background-color: $main-color;
+/** 2. Hero **/
+#hero {
+    .hero-img {
+        margin-top: -60px;
+        max-height: 100vh;
+        overflow-y: hidden;
     }
 
-    img {
-        max-width: 100%;
-        height: auto;
-        object-fit: contain;
+    h1 {
+        font-family: $accent-font;
+        font-size: 12vh;
+    }
+
+    @media (max-width: 425px) {
+        .hero-img {
+            margin-top: 0;
+        }
+    }
+
+    @media (min-width: 1441px) {
+        .hero-img {
+            margin-top: 100px;
         }
 
-    .btn-primary {
-        background: linear-gradient(to right, $second-color 50%, $main-color 50%);
-        border: none;
-        color: $color-coal;
-        transition: all 0.5s ease-out;
-        background-position: right bottom;
-        background-size: 200% 100%;
+        .lg-hero {
+            margin-top: 100px;
+            padding: 10vw 40vw;
+        }
     }
-
-    .btn-primary:hover {
-        background-position: left bottom;
-    }
-
-    h4 {
-        color:$color-coal;
-        text-transform: uppercase;
-        background-color: $second-color;
-    }
-
-    p {
-        line-height: 3.5vh;
-        letter-spacing: 0.2vh;
-        font-size: 2vh;
-    }
-}
-
-/** 4. Testimonials **/
-#testimonials {
-    background-color: $main-color;
-}
-
-.testimonials-container {
-    width: 40vw;
-    height: 20vh;
 }
