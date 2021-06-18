@@ -57,6 +57,7 @@ $body-font: 'Montserrat', sans-serif;
 
  body {
      font-family: $body-font;
+     overflow-x: hidden;
  }
 
 /** 1. Navbar **/
@@ -76,28 +77,32 @@ $body-font: 'Montserrat', sans-serif;
     }
 
     a:hover {
-        color: $secondary-color !important;
+        color: $main-color !important;
     }
 
     @media (min-width: 1441px) {
-        .navbar {
+        .navbar-nav{
             font-size: 1.5vw;
+            padding: 15px;
         }   
     }
 
     @media (max-width: 768px) {
-        .navbar {
-            background-color: #ffffff;
+        .navbar-collapse {
+            background-color: #ffffff !important;
         }
     }
 }
 
 /** 2. Hero **/
-#hero {
+#hero {   
     .hero-img {
-        margin-top: -60px;
+        margin-top: -50px;
+        height: auto;
         max-height: 100vh;
         overflow-y: hidden;
+        overflow-x: hidden;
+        object-fit: cover;
     }
 
     h1 {
@@ -114,11 +119,114 @@ $body-font: 'Montserrat', sans-serif;
     @media (min-width: 1441px) {
         .hero-img {
             margin-top: 100px;
+            background-color: $complement-color;
+        }
+    }
+}
+
+/** 3. Introduction **/
+#introduction, #intro-styles {
+    h3 {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 5vh;
+    }
+
+    p {
+        font-size: 2.5vh;
+        line-height: 5vh;
+    }
+
+    .btn-outline-primary {
+        border-color: $main-color;
+        color: $main-dark-color;
+        font-size: 2.5vh;
+        border-radius: 50px;
+        width: 50%;
+        transition: background-color 1s;
+
+        &:hover {
+            background-color: $main-light-color;
+        }
+    }
+}
+
+#intro-styles {
+    background-color: $main-color;
+    min-height: 100vh;
+
+    #intro-container {
+        background-color: #ffffff;
+        min-height: 50vh;
+    }
+
+    .card {
+        margin-top: -70px;
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+        text-align: left;
+        border: 0;
+
+        &:hover {
+            img {
+                opacity: 0.7;
+            }
+
+            h2 {
+                transform: translateY(-40%);
+            }
+
+            .btn {
+                opacity: 1;
+            }
         }
 
-        .lg-hero {
-            margin-top: 100px;
-            padding: 10vw 40vw;
+        img {
+            opacity: 1;
+            transition: opacity 1s ease-out;
+        }
+
+        h2, .btn {
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            font-size: 5vh;
+            padding-bottom: 5px;
+            text-shadow: 3px 2px 8px $main-dark-color;
+            transition: transform 1s ease-out;
+        }
+
+        .btn {
+            padding: 10px 10px;
+            border: 2px solid $main-light-color;
+            text-decoration: none;
+            color: $main-dark-color;
+            background-color: $main-light-color;
+            letter-spacing: 2px;
+            font-size: 3vh;
+            opacity: 0;
+            transition: opacity 1s ease-out;
+        }
+
+        .card-body {
+            position: absolute;
+            top: 0;
+            margin-top: 27%;
+        }
+
+        @media (max-width: 320px) {
+            .card-body {
+                margin-top: 10%;
+            }
+        }
+
+        @media (min-width: 1439px) {
+            .card-body {
+                margin-top: 30%;
+            }
         }
     }
 }
